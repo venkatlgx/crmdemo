@@ -532,7 +532,7 @@ export default function UsersPage() {
             Total:
           </p>
           <p style={{ color: 'white', fontSize: 16,fontWeight:"bold",fontFamily:"Mulish",marginLeft:"10px" }}> 30 Users</p>
-          <div
+          <button
             style={{
               height: 34,
               width: 65,
@@ -547,7 +547,7 @@ export default function UsersPage() {
           >
             <TuneIcon fontSize='22' style={{ color: 'white' }}></TuneIcon>
             <p style={{ color: 'white', fontSize: 12,fontWeight:"normal",fontFamily:"Mulish" }}>Filter</p>
-          </div>
+          </button>
         </div>
 
         <div style={{ display: 'flex' }}>
