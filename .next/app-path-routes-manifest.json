@@ -1,0 +1,13 @@
+{
+  "/page": "/",
+  "/_not-found": "/_not-found",
+  "/admin/page": "/admin",
+  "/components/page": "/components",
+  "/forme/page": "/forme",
+  "/dashboard/page": "/dashboard",
+  "/messages/page": "/messages",
+  "/more/page": "/more",
+  "/services/page": "/services",
+  "/users/page": "/users",
+  "/api/hello/route": "/api/hello"
+}
