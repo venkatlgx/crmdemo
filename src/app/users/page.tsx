@@ -530,7 +530,7 @@ export default function UsersPage() {
         <div style={{ display: 'flex',alignItems:"center" }}>
           <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: 14,fontWeight:"normal",fontFamily:"Mulish" }}>
             Total:
-      
+          </p>
           <p style={{ color: 'white', fontSize: 16,fontWeight:"bold",fontFamily:"Mulish",marginLeft:"10px" }}> 30 Users</p>
           <button
             style={{
