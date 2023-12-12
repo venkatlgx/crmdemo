@@ -25,7 +25,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
-import Logo from '~/svg/Logo.svg';
+import Logo from '~/svg/logo.svg';
 import User from '~/svg/user.svg';
 const drawerWidth = 340;
 const useStyles = makeStyles({
