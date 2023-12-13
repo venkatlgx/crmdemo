@@ -36,10 +36,13 @@ import AssignBrands from '@/app/components/assignbrand';
 import AssignTeam from '@/app/components/assignteam';
 const useStyles = makeStyles(() => ({
   menuPaper: {
-    backgroundColor: 'rgba(255, 250, 234, 1)',
+    backgroundColor: 'rgba(255, 250, 234, 1)',marginLeft:"-5%"
   },
   tableRow: {
     height: 30,
+  },
+  tableHead:{
+    height: 30,backgroundColor:"rgba(255, 250, 234, 1)"
   },
   tableCell: {
     padding: '0px 16px',
@@ -393,14 +396,14 @@ function EnhancedTableHead(props: EnhancedTableProps) {
   const classes = useStyles();
   return (
     <TableHead sx={{}} style={{}}>
-      <TableRow style={{}} className={classes.tableRow}>
+      <TableRow style={{}} className={classes.tableHead}>
         {headCells.map((headCell, index) => (
           <TableCell
             className={classes.tableCell}
             key={headCell.id}
             align='left'
             padding='normal'
-            style={{ width: index == 0 ? 100 : 'auto' }}
+            style={{ width: index == 0 ? 100 : 'auto',backgroundColor:"rgba(255, 250, 234, 1)",borderWidth:0 }}
             sortDirection={false}
           >
             {index == 0 ? (
@@ -562,7 +565,7 @@ export default function UsersPage() {
               height:36,
               fontStyle:'italic',
               fontWeight: 'bold'
-              ,fontFamily:"Mulish"
+              ,fontFamily:"Mulish",cursor:'pointer'
             
             }}
             name='rowsperpage'
@@ -658,7 +661,9 @@ export default function UsersPage() {
                         backgroundColor:
                           hoveredRow === row.id
                             ? 'rgba(252, 250, 240, 1)'
-                            : 'white',
+                            : 'white'
+                            ,cursor:'pointer'
+
                       }}
                     >
                       {/* <TableCell style={{borderTopLeftRadius:30,borderBottomLeftRadius:30}}   className={classes.tableCell} padding="checkbox">
@@ -875,7 +880,7 @@ export default function UsersPage() {
               paddingLeft: 5,
               marginLeft: 5,
               marginRight: 5
-              ,fontFamily:"Mulish",fontWeight:'normal'
+              ,fontFamily:"Mulish",fontWeight:'normal',cursor:'pointer'
             }}
             name='rowsperpage'
             id='rpp'
@@ -909,7 +914,8 @@ export default function UsersPage() {
               fontSize: 27,
               backgroundColor: page > 0 ? 'white' : 'grey',
               borderRadius: 20,
-              marginRight: 10,
+              marginRight: 10
+              ,cursor:page > 0 ? 'pointer' :'default'
             }}
           ></KeyboardDoubleArrowLeftIcon>
           <KeyboardArrowLeftIcon
@@ -924,7 +930,8 @@ export default function UsersPage() {
               fontSize: 27,
               backgroundColor: page > 0 ? 'white' : 'grey',
               borderRadius: 20,
-              marginRight: 10,
+              marginRight: 10
+              ,cursor:page > 0 ? 'pointer' :'default'
             }}
           ></KeyboardArrowLeftIcon>
           <p
@@ -951,7 +958,8 @@ export default function UsersPage() {
               fontSize: 27,
               backgroundColor: page + 1 < totalpages ? 'white' : 'grey',
               borderRadius: 20,
-              marginRight: 10,
+              marginRight: 10
+              ,cursor:page + 1 < totalpages? 'pointer' :'default'
             }}
           ></KeyboardArrowRightIcon>
           <KeyboardDoubleArrowRightIcon
@@ -964,6 +972,7 @@ export default function UsersPage() {
               fontSize: 27,
               backgroundColor: page + 1 < totalpages ? 'white' : 'grey',
               borderRadius: 20,
+              cursor:page + 1 < totalpages? 'pointer' :'default'
             }}
           ></KeyboardDoubleArrowRightIcon>
         </div>
@@ -1213,6 +1222,7 @@ export default function UsersPage() {
               padding: 12,
               fontSize: '40px',
               borderRadius: 30,
+              cursor: 'pointer'
             }}
           ></CloseIcon>
           {status == 1 ? (

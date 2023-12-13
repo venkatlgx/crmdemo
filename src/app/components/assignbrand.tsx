@@ -244,7 +244,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
             key={headCell.id}
             align='left'
             padding='normal'
-            style={{ width: index == 0 ? 100 : 'auto' }}
+            style={{ width: index == 0 ? 100 : 'auto',backgroundColor:"rgba(255, 250, 234, 1)",borderWidth:0 }}
             sortDirection={false}
           >
             <TableSortLabel
@@ -414,29 +414,31 @@ export default function AssignBrands({ onsave }) {
         </div>
       </div>
       <Box sx={{ width: '100%' }}>
-        <Paper
+      <Paper
           sx={{
             width: '100%',
             mb: 2,
             background: 'rgba(255, 250, 234, 1)',
-            height: '450px',
+   
             marginTop: '10px',
             overflow: 'scroll',
             borderRadius: 2,
             padding: 2,
             paddingTop: 0,
+    
           }}
         >
-          <TableContainer>
+          <TableContainer style={{         height: '400px',}}>
             <Table
               style={{
                 minWidth: 50,
                 borderCollapse: 'separate',
                 borderSpacing: '0px 12px',
               }}
-              aria-labelledby='tableTitle'
+              stickyHeader aria-label="sticky table"
               size='small'
             >
+    
               <EnhancedTableHead
                 numSelected={selected.length}
                 order={order}
@@ -478,6 +480,7 @@ export default function AssignBrands({ onsave }) {
                           hoveredRow === row.id
                             ? 'rgba(252, 250, 240, 1)'
                             : 'white',
+                            cursor:"pointer"
                       }}
                     >
                       {/* <TableCell style={{borderTopLeftRadius:30,borderBottomLeftRadius:30}}   className={classes.tableCell} padding="checkbox">
@@ -700,7 +703,7 @@ export default function AssignBrands({ onsave }) {
       </Box>
       <hr
         style={{
-          borderTop: '1px dashed white',
+          borderTop: '2px dashed rgba(212, 212, 212, 0.2)',
           marginTop: '10px',
           marginBottom: '20px',
         }}

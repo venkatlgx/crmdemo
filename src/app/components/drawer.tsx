@@ -181,10 +181,10 @@ export default function SideBar({ active, onclick }) {
           </Typography>
         </Toolbar>
         <Toolbar sx={{}}>
-          <Search sx={{ color: 'white', height: 20, width: 20 }} />
+          <Search sx={{ color: 'white', height: 20, width: 20,cursor:'pointer' }} />
 
           <Notifications
-            sx={{ color: 'white', height: 20, width: 20, marginLeft: '10px' }}
+            sx={{ color: 'white', height: 20, width: 20, marginLeft: '10px',cursor:'pointer' }}
           />
         </Toolbar>
       </AppBar>
@@ -313,7 +313,7 @@ export default function SideBar({ active, onclick }) {
           ))}
         </List>
 
-        <div style={{ marginTop: 'auto', alignSelf: 'center' }}>
+        <div style={{ marginTop: 'auto', alignSelf: 'center',marginBottom:"30px" }}>
           <User className='w-12' />
         </div>
       </Drawer>

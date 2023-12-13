@@ -60,7 +60,7 @@ export default function UserForm({ onsave }) {
         style={{
           padding: 15,
           width: '80%',
-          height: '100%',
+          height: '500px',
           overflow: 'scroll',
         }}
       >
@@ -177,7 +177,7 @@ export default function UserForm({ onsave }) {
         )}
         <hr
           style={{
-            borderTop: '1px dashed white',
+            borderTop: '2px dashed rgba(212, 212, 212, 0.2)',
             marginTop: '20px',
             marginBottom: '20px',
           }}
@@ -195,7 +195,7 @@ export default function UserForm({ onsave }) {
             >
               Profile Picture
             </p>
-            <label
+            <button
               htmlFor='imageInput'
               style={{
                 width: '40px',
@@ -209,6 +209,8 @@ export default function UserForm({ onsave }) {
                 justifyContent: 'center',
                 cursor: 'pointer',
                 marginLeft: '25%',
+            
+                
               }}
             >
               <input
@@ -228,7 +230,8 @@ export default function UserForm({ onsave }) {
                   position: 'absolute',
                   width: '100%',
                   height: '100%',
-                  cursor: 'pointer',
+              cursor:"pointer"
+            
                 }}
               />
               {formik.values.selectedImage ? (
@@ -239,16 +242,17 @@ export default function UserForm({ onsave }) {
                     maxWidth: '100%',
                     maxHeight: '100%',
                     borderRadius: '100%',
+                    cursor:"pointer"
                   }}
                 />
               ) : (
                 <span
-                  style={{ fontSize: '16px', color: 'rgba(255, 255, 255, 1)' }}
+                  style={{ fontSize: '16px', color: 'rgba(255, 255, 255, 1)' ,cursor:'pointer'}}
                 >
                   +
                 </span>
               )}
-            </label>
+            </button>
             {formik.errors.selectedImage && formik.touched.selectedImage && (
               <p style={{ color: 'red', fontSize: 10,       fontFamily:"Mulish",fontWeight:'bold',fontStyle:'italic'}}>
                 {formik.errors.selectedImage}
@@ -441,7 +445,7 @@ export default function UserForm({ onsave }) {
         </div>
         <hr
           style={{
-            borderTop: '1px dashed white',
+            borderTop: '2px dashed rgba(212, 212, 212, 0.2)',
             marginTop: '20px',
             marginBottom: '20px',
           }}
@@ -802,17 +806,21 @@ export default function UserForm({ onsave }) {
             )}
           </div>
         </div>
+        </div>
+        <div style={{ width: '80%',}}>
+
+
         <hr
           style={{
-            borderTop: '1px dashed white',
-            marginTop: '60px',
+            borderTop: '2px dashed rgba(212, 212, 212, 0.2)',
+   
             marginBottom: '20px',
           }}
         ></hr>
         <div
           style={{
             display: 'flex',
-            marginLeft: '60%',
+            marginLeft: '55%',
        width:"200vw"
           }}
         >
@@ -828,7 +836,7 @@ export default function UserForm({ onsave }) {
          
               textTransform: 'none',
        
-width:"15vw",height:"40px",
+              width:"250px",height:"50px",
 paddingLeft:10,paddingRight:1,      fontFamily:"Mulish",fontWeight:'bold',fontStyle:'italic'
             }}
           >
@@ -846,14 +854,14 @@ paddingLeft:10,paddingRight:1,      fontFamily:"Mulish",fontWeight:'bold',fontSt
               textTransform: 'none',
            
          
-              width:"15vw",height:"40px",
+              width:"250px",height:"50px",
               paddingLeft:10,paddingRight:10,marginLeft:"10px",      fontFamily:"Mulish",fontWeight:'bold',fontStyle:'italic'
             }}
           >
             Next
           </Button>
         </div>
-      </div>
+        </div>
     </formik>
   );
 }
